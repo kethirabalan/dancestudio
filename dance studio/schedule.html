@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+    <!-- Other meta tags and links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+    <header>
+        <nav>
+            <ul>
+                <img src="Studio+M+Logo+1+large.png" alt="Company Logo" class="logo" style="float: left;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <section id="schedule">
+        <h1>Schedule</h1>
+        <p>Our classes run throughout the week. Check out our schedule below:</p>
+        <div class="container">
+            <div class="grid-container">
+                <div class="schedule">
+                    <table class="unique-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>5:00 PM - 6:00 PM</td>
+                            <td>Ballet</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>Jazz</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>4:00 PM - 5:00 PM</td>
+                            <td>Hip Hop</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form">
+                    <h2>Registration Form</h2>
+                    <form id="registrationForm" action="/submit_registration" method="post">
+                        <div class="form-column-left">
+                            <div class="form-group">
+                                <label for="fullName">Full Name:</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-column-right">
+                            <div class="form-group">
+                                <label for="class">Select Class:</label>
+                                <select id="class" name="class">
+                                    <option value="ballet">Ballet</option>
+                                    <option value="jazz">Jazz</option>
+                                    <option value="hipHop">Hip Hop</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="day">Select Day:</label>
+                                <select id="day" name="day">
+                                    <option value="monday">Monday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="friday">Friday</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time:</label>
+                                <input type="text" id="time" name="time" placeholder="e.g., 5:00 PM - 6:00 PM" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>   
+        </div>
+    </div>
+    </section>                            
+    <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-info">
+              <h3>About Us</h3>
+              <p>Unleashing Dance's Power. Movement Elevated, Expression Defined.</p>
+            </div>
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="social-links">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </html>

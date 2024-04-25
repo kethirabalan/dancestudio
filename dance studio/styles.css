@@ -14,13 +14,13 @@ body {
 }
 
 .image-left .content {
-  margin-left: auto; /* Adjust spacing between image and text */
+  margin-left: center; /* Adjust spacing between image and text */
   align-items: left;
   justify-content: end;
 }
 
 .image-right .content {
-  margin-right: auto; /* Adjust spacing between image and text */
+  margin-right: center; /* Adjust spacing between image and text */
   align-items: right;
   justify-content: flex-start;
 }

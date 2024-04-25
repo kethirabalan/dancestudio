@@ -23,7 +23,7 @@ body {
 .image-right .content {
   margin-right: center; /* Adjust spacing between image and text */
   align-items: right;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .img1 {

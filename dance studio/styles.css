@@ -263,7 +263,7 @@ footer {
 }
 
 .footer-info p {
-  color: #ccc;
+  color: #c2e71a;
   line-height: 1.6;
 }
 
@@ -278,7 +278,7 @@ footer {
 }
 
 .footer-links a {
-  color: #ccc;
+  color: #c2e71a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -298,7 +298,7 @@ footer {
 }
 
 .social-links a {
-  color: #ccc;
+  color: #c2e71a;
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;

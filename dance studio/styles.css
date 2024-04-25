@@ -1,14 +1,49 @@
 body {
   font-family: Arial, sans-serif;
-  line-height: 3;
-  text-align: center;
+  line-height: 2.5;
   background-color: #f4f4f4;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
+.imageturn {
+  clear: none;
+  margin-bottom: 400px;
+  overflow: hidden; /* Clear float */
+  justify-content: space-between;
+}
+
+.image-left .content {
+  margin-left: auto; /* Adjust spacing between image and text */
+  align-items: left;
+  justify-content: end;
+}
+
+.image-right .content {
+  margin-right: auto; /* Adjust spacing between image and text */
+  align-items: right;
+  justify-content: flex-start;
+}
+
+.img1 {
+  width: 450px; /* Adjust image width */
+  height: auto;
+  float: left; /* By default images float left */
+}
+
+.img2 {
+  width: 450px; /* Adjust image width */
+  height: auto;
+  float: right; /* By default images float left */
+}
+
+.content {
+  overflow: hidden;
+  text-align: start; /* Clear float */
+}
 
 header {
-  background-color: #afeeee;
+  background-color:     #ffffff;
   padding: 5px;
 }
 
@@ -25,6 +60,10 @@ nav ul li {
 nav ul li a {
   color: #000;
   text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #f4ad07;
 }
 
 section {
@@ -52,40 +91,49 @@ img {
   height: auto;
   width: auto;
   max-width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
 }
+.container {
+  overflow: hidden; /* to contain floated elements */
+}
+
 .header-right {
   float: right;
 }
 
   .form-container {
-    max-width: 350px;
-    margin: 150px auto;
+    width: 250px;
+    margin: auto;
+    background-image: url('form.jpg');
+    background-size: cover;
+    background-position: center;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 18px;
+    padding: 25px;
+    border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
 
   h2 {
     text-align: center;
+    color: #f38a2e;
   }
 
   form {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1px;
   }
 
   label {
     font-weight: bold;
+    text-align: left;
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
     width: calc(100% - 10px);
-    padding: 10px;
+    padding: -0px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -103,29 +151,33 @@ img {
   button:hover {
     background-color: #0056b3;
   }
-  .contact-container {
+  .contect-container {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   .left-content {
-    flex: 1;
+    margin-right: 200px;
   }
   
   .right-content {
-    flex: 0 0 350px;
+    margin-left: 200px;
   }
   
   .address {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
 .main-content {
   flex: 1;
   margin-right: 20px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
 }
 
 .aside {
@@ -236,15 +288,16 @@ p {
 }
 
 footer {
-  background-color: #4169e1;
+  background-color: #9acf99;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
 }
 
 .footer-info,
@@ -257,13 +310,13 @@ footer {
 .footer-info h3,
 .footer-links h3,
 .social-links h3 {
-  color: #fff;
+  color: #000000;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .footer-info p {
-  color: #c2e71a;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -278,7 +331,7 @@ footer {
 }
 
 .footer-links a {
-  color: #c2e71a;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -298,14 +351,14 @@ footer {
 }
 
 .social-links a {
-  color: #c2e71a;
+  color: #ffffff;
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #fff;
+  color: #e03380;
 }
 
 /* Style for the registration form */
@@ -313,6 +366,7 @@ footer {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
+  margin-bottom: 2000px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -367,5 +421,9 @@ footer {
 }
 
   .copyright {
-    color: white;
+    color: black;
+    text-align: center;
 }
+
+
+

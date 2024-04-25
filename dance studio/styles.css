@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .imageturn {
   clear: none;
   margin-bottom: 400px;
@@ -26,13 +27,13 @@ body {
 }
 
 .img1 {
-  width: 450px; /* Adjust image width */
+  width: 400px; /* Adjust image width */
   height: auto;
   float: left; /* By default images float left */
 }
 
 .img2 {
-  width: 450px; /* Adjust image width */
+  width: 400px; /* Adjust image width */
   height: auto;
   float: right; /* By default images float left */
 }

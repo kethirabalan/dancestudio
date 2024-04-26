@@ -6,19 +6,24 @@
     <title>Dance Studio Products</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="script.js" defer></script>
+    <script src="shopping.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="Studio+M+Logo.png" alt="Company Logo" class="logo" style="float: left;"></a></li>
-                <li><a href="product.html" class="nav-link">Product</a></li>
-                <li><a href="classes.html" class="nav-link">Classes</a></li>
-                <li><a href="schedule.html" class="nav-link">Schedule</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-            </ul>
+              <header>
+                <a href="index.html">
+                  <img src="Studio+M+Logo.png" alt="Company Logo" class="logo" style="float: left;">
+                  </a>
+                  <ul class="nav">
+                    <li><a href="product.html" class="nav-link">Product</a></li>
+                    <li><a href="classes.html" class="nav-link">Classes</a></li>
+                    <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+              </ul> 
+          </ul>  
         </nav>
     </header>
     <div class="container">
@@ -29,21 +34,26 @@
                 <h2>T-shirt</h2>
                 <p>"Comfort meets style with our premium cotton T-shirt, the perfect blend of quality and fashion for everyday wear."</p>
                 <p>Price: $10.00</p>
-                <button onclick="addToCart('T-shirt', 10.00)">Add to Cart</button>
+                <button class="btn" id="addToCartBtn1 onclick="addToCart('T-shirt', 10.00)">Add to Cart</button>
             </div>
             <div class="product">
                 <img src="ballatshoeimg.png" alt="Product 2">
                 <h2>Ballet Shoes</h2>
                 <p>"Elevate your performance with our sleek and flexible ballet shoes, designed for optimal comfort and grace in every movement."</p>
                 <p>Price: $15.00</p>
-                <button onclick="addToCart('Ballet Shoes', 15.00)">Add to Cart</button>
+                <button class="btn" id="addToCartBtn1 onclick="addToCart('Ballet Shoes', 15.00)">Add to Cart</button>
             </div>
-            <!-- Add more product items -->
-            <!-- Repeat the structure for each product -->
+            <div class="product">
+                <div class="sale-badge" id="saleBadge1">Sale!</div>
+                <img src="ballatshoeimg.png" alt="">
+                <h2>Shoe</h2>
+                <p>"Elevate your performance with our sleek and flexible ballet shoes, designed for optimal comfort and grace in every movement."</p>
+                <div class="price"><span class="strike">$5</span>$2.50</div>
+                <button class="btn" id="addToCartBtn1" onclick="addToCart('Shoe', 2.50)">Add to Cart</button>
+            </div>
         </div>
     </div>
-</div>
-</body>
+    <br>
     <footer>
         <div class="container">
             <div class="footer-content">

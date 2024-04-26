@@ -1,4 +1,3 @@
-cart.css
 body {
     font-family: Arial, sans-serif;
     line-height: 3.5;
@@ -110,58 +109,62 @@ th {
     background-color: #0056b3;
 }
 
-/* CSS for the right section */
-.right-section {
-    float: right;
-    width: 300px; /* Adjust width as needed */
-    padding: 20px;
-    background-color: #f9f9f9;
+.shopping-cart {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shopping-cart th,
+.shopping-cart td {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.right-section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.right-section form {
-    margin-bottom: 20px;
-}
-
-.right-section input[type="text"] {
-    width: calc(100% - 10px); /* Adjust width as needed */
     padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    text-align: left;
 }
 
-.right-section .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+.shopping-cart th {
+    background-color: #f2f2f2;
+}
+
+.shopping-cart tr:nth-child(even) {
+    background-color: #b5f5f4;
+}
+
+
+.cross-symbol {
+    text-align: auto;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 20px;
+    background-color: #eb1b4f;
+    color: #fff;
+    line-height: 20px;
     cursor: pointer;
 }
 
-.right-section .btn:hover {
-    background-color: #45a049;
+.image-cell img {
+    width: 100%;
+    max-width: 100px;
 }
 
-/* Additional CSS for the forms, adjust as needed */
-/* Example for the Calculate Shipping button */
-.calculate-shipping-btn {
-    background-color: #007bff;
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: #333;
     color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
-/* Example for the Apply Coupon button */
-.apply-coupon-btn {
-    background-color: #ffc107;
-    color: #212529;
+.quantity input {
+    width: 40px;
+    text-align: center;
 }
 
 footer {
@@ -248,3 +251,5 @@ footer {
     height: auto;
     float: left; /* By default images float left */
   }
+
+

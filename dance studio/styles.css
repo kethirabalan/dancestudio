@@ -1,10 +1,24 @@
 body {
   font-family: Arial, sans-serif;
-  line-height: 2.5;
+  line-height: 3.5;
   background-color: #f4f4f4;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.defaultTextBox {
+  padding: 10px;
+  height: auto;
+  width: 850px;
+  position: relative;
+  left: 125px;
+  outline: none;
+  border: 1px solid #f49344;
+  border-radius: 30px; /* Rounded corners for a modern feel */
+  background-color: #f7f7f7; /* Light gray background */
+  font-size: 16px;
+  transition: border-color 0.5s ease; /* Smooth transition for border color */
 }
 
 .imageturn {
@@ -27,13 +41,13 @@ body {
 }
 
 .img1 {
-  width: 400px; /* Adjust image width */
+  width: 385px; /* Adjust image width */
   height: auto;
   float: left; /* By default images float left */
 }
 
 .img2 {
-  width: 400px; /* Adjust image width */
+  width: 380px; /* Adjust image width */
   height: auto;
   float: right; /* By default images float left */
 }
@@ -46,6 +60,7 @@ body {
 header {
   background-color:     #ffffff;
   padding: 5px;
+  
 }
 
 nav ul {
@@ -113,11 +128,6 @@ img {
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    text-align: center;
-    color: #f38a2e;
   }
 
   form {
@@ -225,15 +235,27 @@ img {
 }
 
 h1 {
-  color: #333;
+  color: #e03380;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #f38a2e;
+  margin-top: 50px;
+  margin-bottom: -10px;
+}
+
+h3 {
+  text-align: center;
 }
 
 p {
   color: #666;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding: 15px;
+  text-align: auto;
 }
 
 .testimonial-container {

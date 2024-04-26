@@ -1,0 +1,250 @@
+cart.css
+body {
+    font-family: Arial, sans-serif;
+    line-height: 3.5;
+    background-color: #E9F1FA;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+ }
+
+header {
+    background-color:     #ffffff;
+    padding: 5px;
+ }
+  
+ nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+  
+  nav ul li {
+    display: inline;
+    margin-right: 105px;
+}
+  
+  nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+  
+  .nav-link:hover {
+    color: #f4ad07;
+}
+
+  img {
+    height: 250px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+section h2,
+.class {
+  margin-bottom: 5px;
+}
+
+.logo {
+  height: 55px;
+  width: 180px;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+.container1 {
+    max-width: 900px;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 300px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.total {
+    text-align: right;
+    margin-bottom: 100px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* CSS for the right section */
+.right-section {
+    float: right;
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.right-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.right-section form {
+    margin-bottom: 20px;
+}
+
+.right-section input[type="text"] {
+    width: calc(100% - 10px); /* Adjust width as needed */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.right-section .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-section .btn:hover {
+    background-color: #45a049;
+}
+
+/* Additional CSS for the forms, adjust as needed */
+/* Example for the Calculate Shipping button */
+.calculate-shipping-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Example for the Apply Coupon button */
+.apply-coupon-btn {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+footer {
+    background-color: #ecbca4;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .footer-content {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .footer-info,
+  .footer-links,
+  .social-links {
+    flex: 1 1 300px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-info h3,
+  .footer-links h3,
+  .social-links h3 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer-info p {
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  .footer-links ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .social-links ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #e03380;
+  }
+
+  .copyright {
+    color: black;
+    text-align: center;
+}
+
+.img {
+    width: 385px; /* Adjust image width */
+    height: auto;
+    float: left; /* By default images float left */
+  }

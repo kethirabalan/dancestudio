@@ -24,7 +24,7 @@
     <div class="container">    
         <h1>Shopping Bag</h1>
     <table class="shopping-cart">
-        <tbody>
+        <tbody>        
             <tr>
                 <th style="width: 10px;">S/N</th>
                 <th style="width: 90px;">IMG</th>
@@ -33,25 +33,9 @@
                 <th style="width: 10px;">Quantity</th>
                 <th style="width: 90px;">Subtotal</th>
             </tr>
-            <tr>
-                <td class="cross-symbol">
-                    <div class="circle" onclick="deleteRow(this)">&times;</div>
-                </td>
-                <td class="image-cell">
-                    <img src="">
-                </td>
-                <td></td>
-                <td></td>
-                <td>
-                <div class="quantity">
-                <button class="minus">-</button>
-                <input type="text" class="number" value="1" min="1">
-                <button class="plus">+</button>
-              </div>
-              <div>
-              <td class="subtotal"></td>
-            </div>
-       </td>
+            <tbody id="cart-items"></tbody>
+                </table>
+            </table>
             </tr>
         </tbody>
     </table>

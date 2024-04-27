@@ -1,4 +1,3 @@
-// Function to dynamically add a product to the cart
 function addToCart(product) {
     // Get product details
     var productName = product.dataset.name;
@@ -7,39 +6,22 @@ function addToCart(product) {
     // Create row for the cart
     var row = document.createElement('tr');
 
-    // Create cells for the row
-    var snCell = document.createElement('td');
-    snCell.textContent = document.querySelectorAll('#cart-items tr').length;
-    row.appendChild(snCell);
-
-    var imageCell = document.createElement('td');
-    imageCell.innerHTML = '<img src="' + product.dataset.image + '">';
-    row.appendChild(imageCell);
-
-    var productCell = document.createElement('td');
-    productCell.textContent = productName;
-    row.appendChild(productCell);
-
-    var priceCell = document.createElement('td');
-    priceCell.textContent = productPrice.toFixed(2);
-    row.appendChild(priceCell);
-
-    var quantityCell = document.createElement('td');
-    quantityCell.innerHTML = '<div class="quantity">' +
-        '<button class="minus">-</button>' +
-        '<input type="text" class="number" value="1" min="1">' +
-        '<button class="plus">+</button>' +
-        '</div>';
-    row.appendChild(quantityCell);
-
-    var subtotalCell = document.createElement('td');
-    subtotalCell.classList.add('subtotal');
-    subtotalCell.textContent = productPrice.toFixed(2);
-    row.appendChild(subtotalCell);
-
-    var actionCell = document.createElement('td');
-    actionCell.innerHTML = '<div class="circle" onclick="deleteRow(this)">&times;</div>';
-    row.appendChild(actionCell);
+    // Define the structure of the row
+    row.innerHTML = `
+        <td>${document.querySelectorAll('#cart-items tr').length}</td>
+        <td><img src="${product.dataset.image}" alt="${productName}"></td>
+        <td>${productName}</td>
+        <td>$${productPrice.toFixed(2)}</td>
+        <td>
+            <div class="quantity">
+                <button class="minus">-</button>
+                <input type="text" class="number" value="1" min="1">
+                <button class="plus">+</button>
+            </div>
+        </td>
+        <td class="subtotal">$${productPrice.toFixed(2)}</td>
+        <td><div class="circle" onclick="deleteRow(this)">&times;</div></td>
+    `;
 
     // Append row to the cart
     document.getElementById('cart-items').appendChild(row);
@@ -47,6 +29,7 @@ function addToCart(product) {
     // Update total
     updateTotal();
 }
+
 
 // Function to update total price
 function updateTotal() {
@@ -128,3 +111,50 @@ document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButto
         // Redirect to cart page
         window.location.href = 'cart.html';
     }
+
+
+    // Retrieve cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Function to dynamically generate cart item HTML
+    function generateCartItemHTML(productName, price, quantity, index) {
+        const subtotal = price * quantity;
+        return `
+            <tr>
+                <td class="cross-symbol">
+                    <div class="circle" onclick="deleteRow(${index})">&times;</div>
+                </td>
+                <td class="image-cell">
+                    <img src="shoe1.png" alt="${productName}">
+                </td>
+                <td>${productName}</td>
+                <td>$${price}</td>
+                <td>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <input type="text" class="number" value="${quantity}" min="1">
+                        <button class="plus">+</button>
+                    </div>
+                </td>
+                <td class="subtotal">$${subtotal}</td>
+            </tr>
+        `;
+    }
+
+    // Function to render cart items
+    function renderCartItems() {
+        const cartContainer = document.getElementById('cart-items');
+        cartContainer.innerHTML = '';
+        cartItems.forEach((item, index) => {
+            cartContainer.innerHTML += generateCartItemHTML(item.productName, item.price, item.quantity, index);
+        });
+    }
+
+    // Render cart items when page loads
+    renderCartItems();
+
+    // Function to delete a cart item
+    function deleteRow(index) {
+        cartItems.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        renderCartItems(); }

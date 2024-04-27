@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 3.5;
     background-color: #E9F1FA;
     text-align: center;
     margin: 0;
@@ -8,8 +7,9 @@ body {
  }
 
 header {
+    line-height: 3.5;
     background-color:     #ffffff;
-    padding: 5px;
+    padding: 10px;
  }
   
  nav ul {
@@ -31,19 +31,6 @@ header {
     color: #f4ad07;
 }
 
-  img {
-    height: 250px;
-    width: auto;
-    max-width: 100%;
-    border-radius: 250px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
-}
-
-section h2,
-.class {
-  margin-bottom: 5px;
-}
-
 .logo {
   height: 55px;
   width: 180px;
@@ -59,12 +46,6 @@ section h2,
     padding: 0 20px;
   }
 
-.container1 {
-    max-width: 900px;
-    padding-top: 100px;
-    margin: 0 auto;
-}
-
 h1 {
     text-align: center;
 }
@@ -76,7 +57,7 @@ table {
 }
 
 th, td {
-    padding: 8px;
+    padding: 2px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -116,22 +97,22 @@ th {
 
 .shopping-cart th {
     text-align: center;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     padding: 8px;
 }
 
 .shopping-cart td {
-    border: 1px solid #ffffff;
-    padding: 8px;
-    text-align: left;
+    border: 1px solid #000000;
+    padding: 5px;
+    text-align: center;
 }
 
 .shopping-cart th {
-    background-color: #cc9a90;
+    background-color: #ffffff;
 }
 
 .shopping-cart tr:nth-child(even) {
-    background-color: #629f8e;
+    background-color: #ffffff;
 }
 
 
@@ -157,18 +138,19 @@ th {
 .quantity {
     display: flex;
     align-items: center;
+    
 }
 
 .quantity button {
-    background-color: #333;
+    background-color: #3bd35e;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 3px 20px;
     cursor: pointer;
 }
 
 .quantity input {
-    width: 40px;
+    width: 75px;
     text-align: center;
 }
 
@@ -177,7 +159,14 @@ th {
     /* Add any additional styles you want for the strike-through text */
 }
 
+.container1 {
+  width: auto;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 footer {
+    line-height: 3.5;
     background-color: #ecbca4;
     color: #fff;
     padding: 10px;
@@ -193,7 +182,7 @@ footer {
   .footer-info,
   .footer-links,
   .social-links {
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     margin-bottom: 30px;
   }
   
@@ -252,14 +241,6 @@ footer {
   }
 
   .copyright {
-    color: black;
+    color: #000000;
     text-align: center;
 }
-
-.img {
-    width: 385px; /* Adjust image width */
-    height: auto;
-    float: left; /* By default images float left */
-  }
-
-

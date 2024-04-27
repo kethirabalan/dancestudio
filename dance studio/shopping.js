@@ -25,12 +25,10 @@ function updateSubtotal() {
     const quantityElement = document.querySelector('.shopping-cart .number');
     const subtotalElement = document.querySelector('.shopping-cart .subtotal');
 
-    const price = parseFloat(priceElement.textContent.replace('$', ''));
+    const price = parseFloat(priceElement.textContent.replace('₹', ''));
     const quantity = parseInt(quantityElement.value);
     const subtotal = price * quantity;
 
-    subtotalElement.textContent = '$' + subtotal.toFixed(2);
+    subtotalElement.textContent = '₹' + subtotal.toFixed(2);
 }
 
-// Initial call to update subtotal when the page loads
-updateSubtotal();

@@ -1,39 +1,146 @@
-// Initial call to update subtotal when the page loads
-updateSubtotal();
+let listProductHTML = document.querySelector('.listProduct');
+let listCartHTML = document.querySelector('.listCart');
+let iconCart = document.querySelector('.icon-cart');
+let iconCartSpan = document.querySelector('.icon-cart span');
+let body = document.querySelector('body');
+let closeCart = document.querySelector('.close');
+let products = [];
+let cart = [];
 
-        // Function to add product to cart
-        function addToCart(productName, price) {
-            // Get cart items container
-            var cartItemsContainer = document.getElementById("cart-items");
 
-            // Create new row for the product
-            var newRow = document.createElement("tr");
+iconCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+})
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+})
 
-            // Construct the HTML for the new row
-            newRow.innerHTML = `
-                <td class="cross-symbol">
-                    <div class="circle" onclick="deleteRow(this)">&times;</div>
-                </td>
-                <td class="image-cell">
-                    <img src="ballatshoeimg.png">
-                </td>
-                <td>${productName}</td>
-                <td>$${price}</td>
-                <td>
-                    <div class="quantity">
-                        <button class="minus">-</button>
-                        <input type="text" class="number" value="1" min="1">
-                        <button class="plus">+</button>
-                    </div>
-                </td>
-                <td class="subtotal">$${price}</td>
+    const addDataToHTML = () => {
+    // remove datas default from HTML
+
+        // add new datas
+        if(products.length > 0) // if has data
+        {
+            products.forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.dataset.id = product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">Add To Cart</button>`;
+                listProductHTML.appendChild(newProduct);
+            });
+        }
+    }
+    listProductHTML.addEventListener('click', (event) => {
+        let positionClick = event.target;
+        if(positionClick.classList.contains('addCart')){
+            let id_product = positionClick.parentElement.dataset.id;
+            addToCart(id_product);
+        }
+    })
+const addToCart = (product_id) => {
+    let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+    if(cart.length <= 0){
+        cart = [{
+            product_id: product_id,
+            quantity: 1
+        }];
+    }else if(positionThisProductInCart < 0){
+        cart.push({
+            product_id: product_id,
+            quantity: 1
+        });
+    }else{
+        cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
+const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+const addCartToHTML = () => {
+    listCartHTML.innerHTML = '';
+    let totalQuantity = 0;
+    if(cart.length > 0){
+        cart.forEach(item => {
+            totalQuantity = totalQuantity +  item.quantity;
+            let newItem = document.createElement('div');
+            newItem.classList.add('item');
+            newItem.dataset.id = item.product_id;
+
+            let positionProduct = products.findIndex((value) => value.id == item.product_id);
+            let info = products[positionProduct];
+            listCartHTML.appendChild(newItem);
+            newItem.innerHTML = `
+            <div class="image">
+                    <img src="${info.image}">
+                </div>
+                <div class="name">
+                ${info.name}
+                </div>
+                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>${item.quantity}</span>
+                    <span class="plus">></span>
+                </div>
             `;
+        })
+    }
+    iconCartSpan.innerText = totalQuantity;
+}
 
-            // Append the new row to the cart items container
-            cartItemsContainer.appendChild(newRow);
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        let type = 'minus';
+        if(positionClick.classList.contains('plus')){
+            type = 'plus';
         }
+        changeQuantityCart(product_id, type);
+    }
+})
+const changeQuantityCart = (product_id, type) => {
+    let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
+    if(positionItemInCart >= 0){
+        let info = cart[positionItemInCart];
+        switch (type) {
+            case 'plus':
+                cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
+                break;
+        
+            default:
+                let changeQuantity = cart[positionItemInCart].quantity - 1;
+                if (changeQuantity > 0) {
+                    cart[positionItemInCart].quantity = changeQuantity;
+                }else{
+                    cart.splice(positionItemInCart, 1);
+                }
+                break;
+        }
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
 
-        // Function to delete row from cart
-        function deleteRow(element) {
-            element.closest("tr").remove();
+const initApp = () => {
+    // get data product
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+
+        // get data cart from memory
+        if(localStorage.getItem('cart')){
+            cart = JSON.parse(localStorage.getItem('cart'));
+            addCartToHTML();
         }
+    })
+}
+initApp();

@@ -91,3 +91,40 @@ document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButto
     });
 });
 
+    function addToCart(productName, price) {
+        // Redirect to cart page
+        window.location.href = 'cart.html';
+    }
+
+    function buynow(productName, price) {
+        // Redirect to cart page
+        window.location.href = 'cart.html';
+    }
+
+    function addToCart(productName, price) {
+        // Retrieve existing cart items from localStorage or sessionStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add the new item to the cart
+        cartItems.push({ productName: productName, price: price });
+
+        // Store the updated cart items back to localStorage or sessionStorage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Redirect to cart page
+        window.location.href = 'cart.html';
+    }
+
+    function buynow(productName, price) {
+        // Retrieve existing cart items from localStorage or sessionStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add the new item to the cart
+        cartItems.push({ productName: productName, price: price });
+
+        // Store the updated cart items back to localStorage or sessionStorage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Redirect to cart page
+        window.location.href = 'cart.html';
+    }

@@ -1,4 +1,10 @@
-/* General Styles */
+/* Header Styles */
+header {
+    line-height: 3.5;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #E9F1FA;
@@ -6,29 +12,6 @@ body {
     margin: 0;
     padding: 0;
     
-}
-
-.container {
-    width: 60%;
-    max-width: 1500px; /* Adjust as needed */
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.5;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 300px;
-    padding-top: 70px;
-}
-
-h1 {
-    text-align: center;
-}
-
-/* Header Styles */
-header {
-    line-height: 3.5;
-    background-color: #ffffff;
-    padding: 20px;
 }
 
 .logo {
@@ -61,80 +44,52 @@ nav ul li a {
     color: #f4ad07;
 }
 
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px; /* Adjust spacing */
+/* payment.css */
+
+.payment-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color:#d0bf95;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
 }
 
-th, td {
-    padding: 8px; /* Adjust padding */
+.payment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-container label {
+    display: block;
+    margin-bottom: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #f2f2f2;
+.payment-container input[type="text"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.total {
-    text-align: right;
-}
-
-/* Button Styles */
-.btn {
-    display: inline-block; /* Change to inline-block */
-    width: 200px; /* Adjust width */
+.payment-container button {
+    display: block;
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
-    text-align: center;
-    text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.payment-container button:hover {
     background-color: #0056b3;
-}
-
-/* Shopping Cart Styles */
-.shopping-cart {
-    width: 100%; /* Adjust width */
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-.shopping-cart th, .shopping-cart td {
-    border: 1px solid #000000;
-    padding: 8px;
-    text-align: center;
-}
-
-.shopping-cart th {
-    background-color: #ffffff;
-}
-
-/* Quantity Styles */
-.quantity {
-    display:flex;
-    align-items: left;
-}
-
-.quantity button {
-    background-color: #3bd35e;
-    color: #fff;
-    border: none;
-    padding: 3px 20px;
-    cursor: pointer;
-}
-
-.quantity input {
-    width: 75px;
-    text-align: center;
 }
 
 /* Footer Styles */
@@ -233,5 +188,3 @@ footer {
     color: #000000;
     text-align: center;
 }
-
-

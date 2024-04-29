@@ -8,8 +8,9 @@ function addToCart(productName, price, imageUrl) {
     // Store the updated cart items back to localStorage
     localStorage.setItem('cart', JSON.stringify(cartItems));
 
+    alert('Product added to cart successfully!');
     // Redirect to cart page
-    window.location.href = 'cart.html';
+    window.open('cart.html', '_blank');
 }
 
 // Retrieve cart items from localStorage
@@ -84,4 +85,76 @@ function incrementQuantity(index) {
     cartItems[index].quantity++;
     localStorage.setItem('cart', JSON.stringify(cartItems));
     renderCartItems();
+}
+
+function buynow(productName, price, imageUrl) {
+    // Retrieve existing cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add the new item to the cart
+    cartItems.push({ productName: productName, price: price, quantity: 1, imageUrl: imageUrl });
+
+    // Store the updated cart items back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+
+    // Redirect to payment page
+    window.location.href = 'payment.html';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buyNowBtn = document.getElementById("buy-now-btn");
+    if (buyNowBtn) {
+        buyNowBtn.addEventListener("click", function() {
+            window.location.href = "payment.html";
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var clearAllBtn = document.getElementById("clear-all-btn");
+    if (clearAllBtn) {
+        clearAllBtn.addEventListener("click", function() {
+            // Clear all products from the form
+            var cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+
+            // Update total to 0.00
+            var total = document.getElementById("total");
+            total.textContent = "0.00";
+
+            // Show message "Your cart is empty"
+            var message = document.createElement("tr");
+            message.innerHTML = "<td colspan='6'>Your cart is empty</td>";
+            cartItems.appendChild(message);
+        });
+    }
+});
+
+// Function to handle form submission and payment processing
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Perform payment processing here
+    // Example: integrate with PayPal or Stripe API
+
+    // For demonstration purposes, let's just log a message
+    console.log('Processing payment...');
+
+    // After payment processing, you can redirect to a confirmation page or show a success message
+    // For example:
+    // window.location.href = 'confirmation.html';
+});
+
+// Function to integrate with PayPal
+function payWithPayPal() {
+    // Integration with PayPal API
+    console.log('Redirecting to PayPal...');
+    // Example: window.location.href = 'https://www.paypal.com';
+}
+
+// Function to integrate with Stripe
+function payWithStripe() {
+    // Integration with Stripe API
+    console.log('Redirecting to Stripe...');
+    // Example: window.location.href = 'https://www.stripe.com';
 }

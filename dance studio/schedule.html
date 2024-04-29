@@ -38,22 +38,23 @@
                             <th>Class</th>
                         </tr>
                         <tr>
-                            <td>Monday</td>
-                            <td>5:00 PM - 6:00 PM</td>
+                            <td>Monday-Friday</td>
+                            <td>7:00 AM - 10:00 AM</td>
+                            <td>Bharatanatyam</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>5:00 PM - 9:00 PM</td>
                             <td>Ballet</td>
                         </tr>
                         <tr>
-                            <td>Wednesday</td>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Jazz</td>
-                        </tr>
-                        <tr>
-                            <td>Friday</td>
-                            <td>4:00 PM - 5:00 PM</td>
+                            <td>sunday</td>
+                            <td>5:00 PM - 9:30 PM</td>
                             <td>Hip Hop</td>
                         </tr>
                     </table>
                 </div>
+                <img src="Classical_Dance.png" alt="classical Dance">
                 <div class="form">
                     <h2>Registration Form</h2>
                     <form id="registrationForm" action="/submit_registration" method="post">
@@ -61,7 +62,7 @@
                             <div class="form-group">
                                 <label for="fullName">Full Name:</label>
                                 <input type="text" id="fullName" name="fullName" required>
-                            </div>
+                                </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="email" id="email" name="email" required>
@@ -71,21 +72,22 @@
                                 <input type="tel" id="phone" name="phone" required>
                             </div>
                         </div>
+                        <span></span>
                         <div class="form-column-right">
                             <div class="form-group">
                                 <label for="class">Select Class:</label>
                                 <select id="class" name="class">
-                                    <option value="ballet">Ballet</option>
-                                    <option value="jazz">Jazz</option>
+                                    <option value="ballet">Bharatanatyam</option>
+                                    <option value="jazz">Ballet</option>
                                     <option value="hipHop">Hip Hop</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="day">Select Day:</label>
                                 <select id="day" name="day">
-                                    <option value="monday">Monday</option>
-                                    <option value="wednesday">Wednesday</option>
-                                    <option value="friday">Friday</option>
+                                    <option value="monday">Monday-Friday</option>
+                                    <option value="wednesday">Saturday</option>
+                                    <option value="friday">Sunday</option>
                                 </select>
                             </div>
                             <div class="form-group">

@@ -16,7 +16,7 @@ body {
   outline: none;
   border: 1px solid #f49344;
   border-radius: 30px; /* Rounded corners for a modern feel */
-  background-color: #f7f7f7; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   font-size: 16px;
   transition: border-color 0.5s ease; /* Smooth transition for border color */
 }
@@ -110,12 +110,12 @@ section h2,
   box-shadow:rgba(0, 0, 0, 0.1);
 }
 img {
+  width: 435px; /* Adjust image width */
   height: auto;
-  width: auto;
-  max-width: 100%;
-  border-radius: 250px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+  float: left; /* By default images float left */
+  
 }
+
 .container {
   overflow: hidden; /* to contain floated elements */
 }
@@ -153,7 +153,7 @@ img {
   input[type="email"],
   textarea {
     width: calc(100% - 10px);
-    padding: -0px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -161,7 +161,7 @@ img {
   button {
     width: 100%;
     padding: 10px;
-    background-color: #adcc97;
+    background-color: #2284bd;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -215,27 +215,24 @@ img {
 .unique-table {
   width: 100%;
   border-collapse: collapse;
-  border: 2px solid #ddd;
+  border: 0px solid #ffffff;
 }
 
 .unique-table th,
 .unique-table td {
   padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  text-align: center;
+  border-bottom: 1px solid #E9F1FA;
 }
 
 .unique-table th {
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #f78a8a;
+  color: #ffffff;
 }
 
-.unique-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.unique-table tr:hover {
-  background-color: #ddd;
+.unique-table tr {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 #home {
@@ -392,25 +389,32 @@ footer {
   color: #e03380;
 }
 
+.schedule { 
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 300px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+}
+
 /* Style for the registration form */
 #registrationForm {
   background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 2000px;
+  border-radius: 30px;
+  margin-bottom: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #registrationForm h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 280px;
 }
 
 #registrationForm label {
   font-weight: bold;
 }
 
-#registrationForm input[type="text"],
+#registrationForm input[type="text" ],
 #registrationForm input[type="email"],
 #registrationForm input[type="tel"],
 #registrationForm select,
@@ -419,7 +423,7 @@ footer {
 {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -439,15 +443,16 @@ footer {
 /* Responsive design */
 @media screen and (min-width: 768px) {
   #registrationForm {
-      max-width: 800px; /* Adjusted for two columns */
+      max-width: 600px; /* Adjusted for two columns */
       margin: 0 auto;
+      margin-top: 125px;
       display: flex;
   }
   .form-column-left, .form-column-right {
       flex: 1;
   }
   .form-column-right {
-      margin-left: 20px; /* Adjust space between columns */
+      margin-left: 10px; /* Adjust space between columns */
   }
 }
 

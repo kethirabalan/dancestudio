@@ -23,6 +23,17 @@ header {
     color: #f4ad07;
 }
 
+.cart-count {
+  background-color: red;
+  color: white;
+  padding: 1px 3px;
+  border-radius: 80%;
+  font-size: 10px;
+  position: relative;
+  top: 4px;
+  left: 1px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #E9F1FA;
@@ -59,10 +70,12 @@ body {
     height: auto;
     float: left; /* By default images float left */
   }
-  .listProduct .item img{
+
+.listProduct .item img{
     width: 25%;
     filter: drop-shadow(0 0px 5px #0006);
 }
+
 .listProduct{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -181,7 +194,7 @@ body.showCart .container{
   
 
 footer {
-    line-height: 3.5;
+    line-height: 2.5;
     background-color: #ecbca4;
     color: #fff;
     padding: 10px;

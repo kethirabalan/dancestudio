@@ -6,7 +6,7 @@
     <title>Dance Studio Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="shopping.js" defer></script>
+    <script src="shopping.js" defer></script>   
 </head>
 <body>
     <header>
@@ -23,26 +23,33 @@
     </header>
     <div class="container">    
         <h1>Shopping Bag</h1>
-    <table class="shopping-cart">
-        <tbody>        
-            <tr>
-                <th style="width: 10px;">S/N</th>
-                <th style="width: 90px;">IMG</th>
-                <th style="width: 150px; height: 0px;">Product</th>
-                <th style="width: 90px;">Price</th>
-                <th style="width: 10px;">Quantity</th>
-                <th style="width: 90px;">Subtotal</th>
-            </tr>
+        <table class="shopping-cart">
+            <thead> <!-- Added thead tag -->
+                <tr>
+                    <th style="width: 1px;">S/N</th>
+                    <th style="width: 90px;">IMG</th>
+                    <th style="width: 110px;">Product</th>
+                    <th style="width: 20px;">Price</th>
+                    <th style="width: 5px;">Quantity</th>
+                    <th style="width: 50px;">Subtotal</th>
+                </tr>            
+            </thead> <!-- Closed thead tag -->
             <tbody id="cart-items"></tbody>
-                </table>
-            </table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td id="total">0.00</td>
             </tr>
-        </tbody>
-    </table>
+        </div> <!-- Closed container div -->
+        </table>
     </div>
 </body>
     <footer>
         <div class="container1">
+            <div class="footer">
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>About Us</h3>

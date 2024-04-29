@@ -37,7 +37,6 @@ header {
     max-width: 100%;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow */
 }
 
 nav ul {

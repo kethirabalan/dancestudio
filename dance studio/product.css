@@ -70,7 +70,7 @@ body {
 .h1 {
   color: #e42363;
   padding-bottom: 25px;
-  padding-top: 25px;
+  padding-top: 45px;
 }
 
 .img {
@@ -80,23 +80,25 @@ body {
   }
 
 .listProduct .item img{
-    width: 25%;
+    width: 55%;
     filter: drop-shadow(0 0px 5px #0006);
 }
 
 .listProduct{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 300px;
-    padding-top: 100px;
+    gap: -25px;
+    margin-left: 190px;
+    margin-right: 75px;
+    margin-bottom: 200px;
+    margin-top: 20px;
 }
 .listProduct .item{
     background-color: #EEEEE6;
-    padding: 10px;
-    border-radius: 40px;
+    padding-bottom: 20px;
+    border-radius: 50px 0;
+    margin: 10px;
+    width: 70%;
 }
 .listProduct .item h2{
     font-weight: 400;
@@ -107,12 +109,13 @@ body {
     font-size: medium;
 }
 .listProduct .item button{
-    background-color: #d86c14;
+    background-color: #43BFC7;
     color: #eee;
     border: none;
     padding: 5px 10px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 0px 10px;
+    width:50%;
 }
 
 /* cart */
@@ -134,78 +137,14 @@ body.showCart .cartTab{
 body.showCart .container{
     transform: translateX(-250px);
 }
-.cartTab h1{
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-}
-.cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.cartTab button{
-    background-color: #E8BC0E;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
-    cursor: pointer;
-}
-.cartTab .close{
-    background-color: #eee;
-}
-.listCart .item img{
-    width: 100%;
-}
-.listCart .item{
-    display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-}
-.listCart .quantity span{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-    color: #555;
-    cursor: pointer;
-}
-.listCart .quantity span:nth-child(2){
-    background-color: transparent;
-    color: #eee;
-    cursor: auto;
-}
-.listCart .item:nth-child(even){
-    background-color: #eee1;
-}
-.listCart{
-    overflow: auto;
-}
-.listCart::-webkit-scrollbar{
-    width: 0;
-}
-@media only screen and (max-width: 992px) {
-    .listProduct{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* mobile */
-@media only screen and (max-width: 768px) {
-    .listProduct{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-  
 
 footer {
     line-height: 2.5;
     background-color: #ecbca4;
     color: #fff;
     padding: 10px;
+    padding-left: 125px;
+    padding-right: 125px;
   }
   
   .footer-content {

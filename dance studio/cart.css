@@ -90,7 +90,7 @@ th {
 }
 
 /* Button Styles */
-.btn {
+.button {
     display: inline-block; /* Change to inline-block */
     width: 200px; /* Adjust width */
     padding: 10px;
@@ -132,7 +132,7 @@ th {
 }
 
 .quantity button {
-    background-color: #3bd35e;
+    background-color: #f75c80;
     color: #fff;
     border: none;
     padding: 3px 20px;

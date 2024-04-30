@@ -21,9 +21,8 @@ function generateCartItemHTML(productName, price, quantity, imageUrl, index) {
     const subtotal = price * quantity;
     return `
         <tr>
-            <td class="cross-symbol">
-                <div class="circle" onclick="deleteRow(${index})">&times;</div>
-            </td>
+            <td class="sn">${index + 1}</td>
+             </td>
             <td class="image-cell">
                 <img src="${imageUrl}" alt="${productName}">
             </td>
@@ -122,13 +121,22 @@ document.addEventListener("DOMContentLoaded", function() {
             var total = document.getElementById("total");
             total.textContent = "0.00";
 
+            // Remove cart items from localStorage
+            localStorage.removeItem("cart"); 
+
             // Show message "Your cart is empty"
             var message = document.createElement("tr");
             message.innerHTML = "<td colspan='6'>Your cart is empty</td>";
             cartItems.appendChild(message);
+
+             // Redirect to product page after 5 seconds
+            setTimeout(function() {
+                window.location.href = "product.html";
+            }, 4000); // 5000 milliseconds = 5 seconds
         });
     }
 });
+
 
 // Function to handle form submission and payment processing
 document.getElementById('payment-form').addEventListener('submit', function(event) {

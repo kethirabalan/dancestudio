@@ -50,6 +50,14 @@ body {
   background-color: white;
   box-shadow:rgba(0, 0, 0, 0.1);
 }   
+
+.logo2 {
+  height: 55px;
+  width:250px;
+  max-width: 100%;
+  border-radius: 5px; 
+}
+
 .container{
   width: 500px;
   margin: auto;
@@ -225,6 +233,7 @@ footer {
   .footer-info p {
     color: #000000;
     line-height: 1.6;
+    margin-top: 72px;
   }
   
   .footer-links ul {
@@ -254,7 +263,7 @@ footer {
   
   .social-links li {
     display: inline-block;
-    margin-right: 15px;
+    margin-left: 25px;
   }
   
   .social-links a {

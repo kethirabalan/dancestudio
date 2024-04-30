@@ -109,6 +109,14 @@ section h2,
   background-color: white;
   box-shadow:rgba(0, 0, 0, 0.1);
 }
+
+.logo2 {
+  height: 55px;
+  width:250px;
+  max-width: 100%;
+  border-radius: 5px; 
+}
+
 img {
   width: 435px; /* Adjust image width */
   height: auto;
@@ -346,6 +354,7 @@ footer {
 .footer-info p {
   color: #000000;
   line-height: 1.6;
+  margin-top: 60px;
 }
 
 .footer-links ul {
@@ -370,7 +379,7 @@ footer {
 
 .social-links ul {
   padding: 0;
-  margin: 0;
+  margin-left: 25px;
 }
 
 .social-links li {

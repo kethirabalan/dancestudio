@@ -62,6 +62,8 @@ body {
 .video {
   position: center;
   border-radius: 3vw 3vw 3vw 3vw;
+  width: 700px;
+  margin-left: 200px;
 }
 
 header {
@@ -275,10 +277,8 @@ p {
   max-height: auto;
   text-align: left;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
   gap: 20px; /* Space between columns */
@@ -286,7 +286,7 @@ p {
 
 .testimonial {
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 18px;
 }
 
 .message1 {
@@ -302,7 +302,7 @@ p {
 }
 
 .testimonial p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 0;
 }

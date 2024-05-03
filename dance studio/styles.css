@@ -62,8 +62,8 @@ body {
 .video {
   position: center;
   border-radius: 3vw 3vw 3vw 3vw;
-  width: 700px;
-  margin-left: 200px;
+  width: 900px;
+  margin-left: 150px;
 }
 
 header {
@@ -269,24 +269,26 @@ p {
   line-height: 1.6;
   margin-bottom: 10px;
   padding: 15px;
-  text-align: auto;
+  text-align:center;
+  width: 1180px;
+  padding-left: 170px;
 }
 
 .testimonial-container {
-  max-width: 1200px;
+  max-width: 1000px;
   max-height: auto;
   text-align: left;
   margin: 0 auto;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
   gap: 20px; /* Space between columns */
 }
 
 .testimonial {
-  padding: 10px;
-  border-radius: 18px;
+  padding: 20px;
+  border-radius: 10px 0;
 }
 
 .message1 {

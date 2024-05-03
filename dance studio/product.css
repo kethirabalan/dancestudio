@@ -47,8 +47,6 @@ body {
   width: 180px;
   max-width: 100%;
   border-radius: 5px;
-  background-color: white;
-  box-shadow:rgba(0, 0, 0, 0.1);
 }   
 
 .logo2 {
@@ -140,7 +138,7 @@ body.showCart .container{
 
 footer {
     line-height: 2.5;
-    background-color: #ecbca4;
+    background-color: #E5E6E6;
     color: #fff;
     padding: 10px;
     padding-left: 125px;
@@ -206,7 +204,7 @@ footer {
   }
   
   .social-links a {
-    color: #ffffff;
+    color: #3b5998;
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s ease;

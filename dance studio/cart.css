@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #E9F1FA;
+    background-color: #e9ece3;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -71,14 +71,13 @@ nav ul li a {
 /* Table Styles */
 table {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 30px; /* Adjust spacing */
 }
 
 th, td {
     padding: 8px; /* Adjust padding */
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #fff;  
 }
 
 th {
@@ -110,14 +109,14 @@ th {
 
 /* Shopping Cart Styles */
 .shopping-cart {
-    width: 100%; /* Adjust width */
+    width: 80%; /* Adjust width */
     border-collapse: collapse;
     margin: 0 auto;
 }
 
 .shopping-cart th, .shopping-cart td {
+    padding: 5px;
     border: 1px solid #000000;
-    padding: 8px;
     text-align: center;
 }
 
@@ -128,7 +127,7 @@ th {
 /* Quantity Styles */
 .quantity {
     display:flex;
-    align-items: left;
+    padding-left: 50px;
 }
 
 .quantity button {
@@ -146,7 +145,7 @@ th {
 
 /* Footer Styles */
 footer {
-    background-color: #ecbca4;
+    background-color: #E5E6E6;
     color: #fff;
     padding: 20px 10%; /* Adjust padding */
     text-align: center;
@@ -186,7 +185,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-links a, .social-links a {
+.footer-links a {
     color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -202,7 +201,7 @@ footer {
 }
 
 .social-links a {
-    color: #ffffff;
+    color: #3b5998;
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s ease;

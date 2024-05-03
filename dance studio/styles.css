@@ -106,7 +106,6 @@ section h2,
   width: 185px;
   max-width: 100%;
   border-radius: 5px;
-  background-color: white;
   box-shadow:rgba(0, 0, 0, 0.1);
 }
 
@@ -324,7 +323,7 @@ p {
 }
 
 footer {
-  background-color: #ecbca4;
+  background-color: #E5E6E6;
   color: #fff;
   padding: 10px;
 }
@@ -388,7 +387,7 @@ footer {
 }
 
 .social-links a {
-  color: #ffffff;
+  color: #3b5998;
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;

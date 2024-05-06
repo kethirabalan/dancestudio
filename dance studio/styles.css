@@ -105,9 +105,10 @@ section h2,
 
 .logo2 {
   height: 55px;
-  width:250px;
+  width:150px;
   max-width: 100%;
-  border-radius: 5px; 
+  border-radius: 5px;
+  margin-left: 80px; 
 }
 
 img {

@@ -137,32 +137,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
-// Function to handle form submission and payment processing
-document.getElementById('payment-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Perform payment processing here
-    // Example: integrate with PayPal or Stripe API
-
-    // For demonstration purposes, let's just log a message
-    console.log('Processing payment...');
-
-    // After payment processing, you can redirect to a confirmation page or show a success message
-    // For example:
-    // window.location.href = 'confirmation.html';
-});
-
-// Function to integrate with PayPal
-function payWithPayPal() {
-    // Integration with PayPal API
-    console.log('Redirecting to PayPal...');
-    // Example: window.location.href = 'https://www.paypal.com';
-}
-
-// Function to integrate with Stripe
-function payWithStripe() {
-    // Integration with Stripe API
-    console.log('Redirecting to Stripe...');
-    // Example: window.location.href = 'https://www.stripe.com';
-}

@@ -41,13 +41,35 @@ header {
 }
 
 .logo2 {
-    height: 55px;
+    height: 75px;
     width:250px;
-    max-width: 100%;
     border-radius: 5px; 
 }  
 
-.nav-link {
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Change this to your desired background color */
+  }
+  
+  .navbar-brand img {
+    max-width: 100%; /* Ensure the logo doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Offcanvas */
+  .offcanvas-header {
+    background-color: #ffffff; /* Change this to your desired background color */
+  }
+  
+  .offcanvas-title {
+    color: #000000; /* Change this to your desired text color */
+  }
+  
+  .offcanvas-body {
+    padding: 0; /* Reset padding to ensure proper alignment */
+  }
+
+  .nav-link {
     position: relative;
     text-decoration: none;
   }
@@ -57,7 +79,7 @@ header {
     position: absolute;
     width: 100%;
     height: 2px; /* Adjust this value to change the thickness of the underline */
-    top: 20px;
+    top: 50px;
     left: 0;
     background-color: #43e4c6; /* Adjust this value to change the color of the underline */
     visibility: hidden;
@@ -86,6 +108,35 @@ nav ul li a {
     color: #000;
     text-decoration: none;
 }
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
 
 /* Table Styles */
 table {
@@ -191,7 +242,7 @@ footer {
 .footer-info p {
     color: #000000;
     line-height: 1.6;
-    margin-top: 72px;
+    margin-top: 10px;
 }
 
 .footer-links ul, .social-links ul {

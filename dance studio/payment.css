@@ -24,9 +24,32 @@ body {
 
 .logo2 {
     height: 55px;
-    width:250px;
+    width:2500px;
     max-width: 100%;
     border-radius: 5px; 
+  }
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Change this to your desired background color */
+  }
+  
+  .navbar-brand img {
+    max-width: 100%; /* Ensure the logo doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Offcanvas */
+  .offcanvas-header {
+    background-color: #ffffff; /* Change this to your desired background color */
+  }
+  
+  .offcanvas-title {
+    color: #000000; /* Change this to your desired text color */
+  }
+  
+  .offcanvas-body {
+    padding: 0; /* Reset padding to ensure proper alignment */
   }
 
   .nav-link {
@@ -39,7 +62,7 @@ body {
     position: absolute;
     width: 100%;
     height: 2px; /* Adjust this value to change the thickness of the underline */
-    top: 20px;
+    top: 50px;
     left: 0;
     background-color: #43e4c6; /* Adjust this value to change the color of the underline */
     visibility: hidden;
@@ -69,106 +92,107 @@ nav ul li a {
     text-decoration: none;
 }
 
-.form-container {
+.row {
+    display: -ms-flexbox; /* IE10 */
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 150px;
-    margin-top: 140px;
-    margin-left: 500px;
-    /* border: 2px solid black; */
-}
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 50px 20px 50px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-top: 35px;
+  }
 
-.form-container h2 {
-    margin-bottom: 10px;
-    margin-top: 20px;
-    text-align: center;
-    text-size-adjust: 10px;
-    color: #ffffff;
-}
-
-.form-container form {
-    flex: 1;
-    background-color: #b9e6bb;
-    border: 10px solid #c9ebe8;
-    height: 400px; 
-    width: 250px ;
-    border-radius: 0px 0px 0px 0px;
-}
-
-.form-container button {
-    background-color: #27d88b;
-    color: #ffffff;
-}
-
-.form-container button[type="submit"] {
-    margin-top: 7%; /* Adjust as needed */
-    margin-left: 110px;
-}
-
-
-.cart-input {
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-
-.cart-input label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.cart-input input {
-    width: 80%;
-    padding: 7px;
-    border-radius: 5px;
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
     border: 1px solid #ccc;
-}
-
-.payment-container {
-    border-radius: 15px;
-    margin-right: 500px;
-}
-
-
-.payment-container button[type="submit"] {
-    margin-top: 15px; /* Adjust as needed */
-    margin-left: 80px;
-}
-
-.payment-container h2 {
+    border-radius: 3px;
+  }
+  
+  label {
     margin-bottom: 10px;
-}
-
-.payment-options {
-    margin-top: 20px;
-}
-
-.payment-options h3 {
-    margin-bottom: 10px;
-    text-align: center;    
-}
-
-.payment-options button {
-    margin-left: 20px;
-    padding: 8px 20px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
     border: none;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 3px;
     cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-}
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
 
-.payment-options button:hover {
-    background-color: #0056b3;
-}
-
+  h3 {
+    text-align: center;
+    color: #e42363;
+    margin-top: 50px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+  
 /* Footer Styles */
 footer {
     background-color: #E5E6E6;
     color: #fff;
-    padding: 20px 10%; /* Adjust padding */
+    padding: 50px 10%; /* Adjust padding */
     text-align: center;
     line-height: 2.5;
+    margin-top: 70px;
 }
 
 .footer-content {
@@ -191,7 +215,7 @@ footer {
 .footer-info p {
     color: #000000;
     line-height: 1.6;
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .footer-links ul, .social-links ul {

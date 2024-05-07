@@ -1,5 +1,5 @@
 header {
-    line-height: 3.5;
+    line-height: 2.5;
     background-color: #ffffff;
     padding: 20px;
 }
@@ -108,7 +108,6 @@ nav ul li a {
   .container {
     background-color: #ffffff;
     padding: 50px 20px 50px 20px;
-    border: 1px solid lightgrey;
     border-radius: 10px;
     margin-top: 35px;
   }
@@ -171,7 +170,9 @@ nav ul li a {
   
 /* Footer Styles */
 footer {
-    background-color: #E5E6E6;
+    background-image: url('foot.jpg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Positions the background image */
     color: #fff;
     padding: 50px 10%; /* Adjust padding */
     text-align: center;

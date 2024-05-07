@@ -63,7 +63,7 @@ body {
   position: center;
   border-radius: 3vw 3vw 3vw 3vw;
   width: 700px;
-  margin-left: 200px;
+  margin-left: 230px;
 }
 
     header {
@@ -324,6 +324,9 @@ p {
 }
 
 footer {
+  background-image: url('foot.jpg');
+  background-size: cover; /* Adjusts the size of the background image */
+  background-position: center; /* Positions the background image */
   background-color: #E5E6E6;
   color: #fff;
   padding: 10px;

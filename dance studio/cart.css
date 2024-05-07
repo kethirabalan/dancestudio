@@ -145,8 +145,10 @@ th {
 }
 
 footer {
+    background-image: url('foot.jpg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Positions the background image */
     line-height: 2.5;
-    background-color: #E5E6E6;
     color: #fff;
     padding: 10px;
     padding-left: 125px;

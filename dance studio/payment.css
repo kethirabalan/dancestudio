@@ -13,22 +13,6 @@ body {
     box-sizing: border-box;
 }
 
-.logo {
-    height: 55px;
-    width: 180px;
-    max-width: 100%;
-    border-radius: 5px;
-    margin-left: 25px;
-}
-
-
-.logo2 {
-    height: 55px;
-    width:2500px;
-    max-width: 100%;
-    border-radius: 5px; 
-  }
-
 /* Navbar */
 .navbar {
     background-color: #ffffff; /* Change this to your desired background color */
@@ -122,7 +106,7 @@ nav ul li a {
   }
   
   .container {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 50px 20px 50px 20px;
     border: 1px solid lightgrey;
     border-radius: 10px;

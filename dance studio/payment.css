@@ -1,7 +1,7 @@
 header {
     line-height: 2.5;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0px;
 }
 
 body {
@@ -16,6 +16,7 @@ body {
 /* Navbar */
 .navbar {
     background-color: #ffffff; /* Change this to your desired background color */
+    border-bottom: 1px solid #eee;
   }
   
   .navbar-brand img {
@@ -220,7 +221,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #063970;
+    color: #ffffff;
 }
 
 .social-links li {
